@@ -4,7 +4,19 @@
 
 .card-list {
 	list-style: none;
-	padding: 0
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+
+	> * {
+		padding: 0 20px;
+
+		@media (min-width: 1800px) {
+			width: 25%;
+		}
+	}
+
+
 }
 
 .card {
