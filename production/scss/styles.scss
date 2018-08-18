@@ -1,0 +1,36 @@
+// SETTINGS
+@import 'settings/settings.fonts';			// all web font definitions go here
+@import 'settings/settings.variables';		// global settings file
+
+// TOOLS
+@import 'tools/tools.mixins';				// all mixins go here
+
+// GENERIC
+@import 'generic/generic.reset';			// resets the browser's default styles
+
+// BASE 									// ** BASE STYLES (tag selectors; no cosmetics; no classes) **
+@import 'base/base.page';					// page related styles (HTML, body, etc.)
+@import 'base/base.type';					// generic text styles (h1-h6, p, quote, cite, small, strong, etc.)
+@import 'base/base.links';					// generic link styles 
+@import 'base/base.lists';					// generic list styles
+@import 'base/base.forms';					// generic form style (removed vendor specific styles, safari, mozilla...)
+	
+
+
+// OBJECTS 									// ** OBJECTS STYLES (page object elements - buttons, lists etc.; no, cosmetics; first layer with classes being used) 			
+@import 'objects/objects.buttons';			// default buttons wireframe
+@import 'objects/objects.inputs';			// default styles for input elements
+@import 'objects/objects.images';			// default image layouts
+@import 'objects/objects.flex-grid';		// flex grid layout
+
+
+// COMPONENTS 								// ** COMPONENTS (actual styling of the elements) **
+@import 'components/components.inputs';
+@import 'components/components.cards';
+@import 'components/components.nav';
+@import 'components/components.buttons';	
+@import 'components/components.header';	
+
+// TRUMPS: ;								// ** TRUMPS (overrides; layer with helper and other classes; contains !important)
+@import 'trumps/trumps.type';				// text type overrides (font weight, size, decoration, etc.)
+@import 'trumps/trumps.colors';				// color overrides

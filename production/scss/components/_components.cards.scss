@@ -1,0 +1,68 @@
+/*------------------------------------
+	@COMPONENTS #CARDS
+--------------------------------------*/
+
+.card-list {
+	list-style: none;
+	padding: 0
+}
+
+.card {
+	background-color: #fff;
+	display: inline-block;
+	margin-bottom: 128px;
+	max-width: 440px;
+	padding: 0
+}
+
+.card__img {
+	box-shadow: 0 0 45px 0 rgba(0,0,0,.2);
+	margin-bottom: 50px;
+	padding: 40px 66px;
+	position: relative;
+
+	&:hover {
+		.card__overlay {
+			background-color: hsla(0,0%,100%,.8)
+		}
+
+		.card__btn {
+			opacity: 1;
+			transform: none;
+			@include trans;
+		}
+	}
+
+	> img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%		
+	}
+}
+
+.card__copy {
+	color: #333;
+	font-size: 20px;
+	padding: 0 50px;
+	text-align: center
+}
+
+.card__overlay {
+	align-items: center;
+	background-color: hsla(0,0%,100%,0);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	@include trans;
+}
+
+.card__btn {
+	opacity: 0;
+	transform: translateY(180%);
+	transition: none;
+	transition-delay: .2s
+}
