@@ -30,13 +30,13 @@
 		<a href="#!" class="nav__logo"><img src="img/vimcar-logo.svg" alt=""></a>
 		<div class="nav__toolbox">
 			<img src="img/cart.svg" alt="">
-			<span class="nav__bubble js-cart-bubble" data-display="flex,-webkit-box,-webkit-flex,-ms-flexbox"></span>
+			<span class="nav__bubble js-cart-bubble"></span>
 		</div>
 	</nav>
 </header>
 <!-- Header ./end-->
 
-
+<main class="main">
 	<div class="container">
 		<ul class="card-list">
 			<li>
@@ -71,8 +71,41 @@
 					</p>
 				</div>
 			</li>
+			<li>
+				<div class="card" data-item="1003">
+					<div class="card__img">
+						<picture>
+							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/s42rg-nsdb-sel-201603@2x.png">
+							<img class="img-responsive" src="img/s42rg-nsdb-sel-201603.png" alt="watch 02">
+						</picture> 
+						<div class="card__overlay">
+							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
+						</div>
+					</div>
+					<p class="card__copy">
+						42mm Rose Gold Aluminum Case with Royal Blue Woven Nylon
+					</p>
+				</div>
+			</li>
+			<li>
+				<div class="card" data-item="1004">
+					<div class="card__img">
+						<picture>
+							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/s42si-nssb-sel-201603@2x.png">
+							<img class="img-responsive" src="img/s42si-nssb-sel-201603.png" alt="watch 02">
+						</picture> 
+						<div class="card__overlay">
+							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
+						</div>
+					</div>
+					<p class="card__copy">
+						42mm Silver Aluminum Case with Scuba Blue Woven Nylon
+					</p>
+				</div>
+			</li>
 		</ul>
 	</div>
+</main>
 
 	<!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

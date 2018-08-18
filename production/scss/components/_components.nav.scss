@@ -35,7 +35,6 @@
 	bottom: calc(100% - 4px);
 	color: #fff;
 	cursor: default;
-	display: flex;
 	display: none;
 	height: 32px;
 	justify-content: center;
@@ -43,4 +42,8 @@
 	line-height: 1;
 	min-width: 38px;
 	position: absolute;
+
+	&.in {
+		display: flex;
+	}
 }
