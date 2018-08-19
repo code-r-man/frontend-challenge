@@ -3,19 +3,30 @@
 ------------------------------------*/
 
 .btn {
-	background-color: transparent!important;
-	border: 2px solid #000!important;
-	border-radius: 0;
-	color: #000;
-	font-size: 20px;
-	font-weight: 700;
-	padding: 20px 100px
+	&, 
+	&:focus,
+	&:active {
+		background-color: transparent;
+		border: 2px solid #000;
+		border-radius: 0;
+		color: #000;
+		font-size: 20px;
+		font-weight: 700;
+		padding: 20px 100px;		
+	}
+
+	&.confirm {
+		background-color: #2ecc71 !important;
+		border-color: #2ecc71 !important;
+		color: #fff !important;
+		cursor: default !important;
+	}
 }
 
 .btn {
 	&:active,
 	&:hover {
-		background-color: #000!important;
+		background-color: #000;
 		color: #fff		
 	}
 }
