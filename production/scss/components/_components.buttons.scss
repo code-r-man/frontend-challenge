@@ -3,16 +3,20 @@
 ------------------------------------*/
 
 .btn {
+	font-weight: 700;
+	border-radius: 0;
+
+	@media (min-width: 1024px) {
+		font-size: 20px;
+		padding: 20px 100px;		
+	}
+
 	&, 
 	&:focus,
 	&:active {
 		background-color: transparent;
 		border: 2px solid #000;
-		border-radius: 0;
 		color: #000;
-		font-size: 20px;
-		font-weight: 700;
-		padding: 20px 100px;		
 	}
 
 	&.confirm {

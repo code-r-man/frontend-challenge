@@ -11,6 +11,10 @@
 
 	> * {
 		padding: 0 20px;
+	
+		@media (min-width: 768px) {
+			width: 50%;
+		}
 
 		@media (min-width: 1800px) {
 			width: 25%;
@@ -22,17 +26,35 @@
 
 .card {
 	background-color: #fff;
-	display: inline-block;
-	margin-bottom: 128px;
+	display: block;
 	max-width: 440px;
-	padding: 0
+	padding: 0;
+	margin-bottom: 60px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: 1024px) {
+		margin-bottom: 128px;
+	}
+
 }
 
 .card__img {
 	box-shadow: 0 0 45px 0 rgba(0,0,0,.2);
-	margin-bottom: 50px;
 	padding: 40px 66px;
 	position: relative;
+	margin-bottom: 30px;
+
+	picture,
+	img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media (min-width: 1024px) {
+		margin-bottom: 50px;
+	}
 
 	&:hover {
 		box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
@@ -57,9 +79,17 @@
 
 .card__copy {
 	color: #333;
-	font-size: 20px;
-	padding: 0 50px;
-	text-align: center
+	padding: 0 10px;
+	text-align: center;
+	font-size: 16px;
+
+	@media (min-width: 768px) {
+		font-size: 20px;
+	}
+
+	@media (min-width: 1024px) {
+		padding: 0 50px;
+	}
 }
 
 .card__overlay {

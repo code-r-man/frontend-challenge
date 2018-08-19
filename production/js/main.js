@@ -34,3 +34,12 @@ $(document).ready(() => {
         addProduct($(this).parents('.card').data('item'), event.target);            
     })
 });
+
+$(window).on('scroll touchmove', () => {
+    if ($(document).scrollTop() > 20) {
+       $('header').addClass('in');
+      
+    } else {
+        $('header').removeClass('in');
+    }
+ }).scroll();
