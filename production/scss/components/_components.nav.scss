@@ -42,7 +42,40 @@
 		> img {
 			display: block;
 			margin-bottom: 0;
-			width: 44px;		
+			width: 44px;	
+
+			&.animate {
+				animation-name: shake;
+				animation-duration: 2s;	
+				animation-iteration-count: infinite;		
+			}	
+
+			@keyframes shake{
+				0% {
+					transform: rotate(-10deg);
+				}
+
+				5% {
+					transform: rotate(10deg);
+				}
+
+				10% {
+					transform: rotate(-10deg);
+				}
+
+				15% {
+					transform: rotate(10deg);
+				}
+
+				20% {
+					transform: none;
+				}
+
+				100% {
+					transform: none;
+				}
+
+			}
 		}
 
 		&[disabled] {

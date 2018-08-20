@@ -27,6 +27,9 @@ $(document).ready(() => {
         // Append the cart list with the product details
         $('#cart').append(`<li data-key="${items[targetIndex].id}">${items[targetIndex].copy}</li>`);
 
+        // Start animating the cart - needs attention
+        $('.js-cart-toggle').find('img').addClass('animate');
+
         // Inform the user that the item has been added
         const initialText = $(_target).text();
         const flashText = 'Item added';
@@ -47,6 +50,7 @@ $(document).ready(() => {
     // Toggle cart list
     const toggleItemsList = () => {
         $('.js-nav-list').hasClass('in') ? $('.js-nav-list').removeClass('in') : $('.js-nav-list').addClass('in');
+        $('.js-cart-toggle').find('img').removeClass('animate');
     };
 
     $('.js-cart-toggle').click(()=> {
