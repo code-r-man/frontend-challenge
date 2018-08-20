@@ -39,6 +39,13 @@ $(document).ready(() => {
         // Get the item id and push it
         updateCart($(this).parents('.card').data('item'), $(this));                    
     });
+
+    // Toggle cart list
+    $('.js-cart-toggle').click(()=> {
+        console.log('hey');
+        $('.js-nav-list').hasClass('in') ? $('.js-nav-list').removeClass('in') : $('.js-nav-list').addClass('in');
+        
+    });
 });
 
 

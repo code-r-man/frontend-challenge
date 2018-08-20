@@ -78,24 +78,46 @@
 		right: 0px;
 		min-width: 320px;
 		font-size: 13px;
-		max-height: 380px;
-		overflow-y: auto; 
+		display: none;
 
-		> li {
+		&.in {
 			display: block;
-			text-align: left;
-			padding: 0 20px;
-			@include trans;
-			padding-top: 12px;
-			padding-bottom: 12px;
-			cursor: default;
+		}
 
-			&:hover {
-				background-color: #eee;
-			}
+		> * {
+			max-height: 380px;
+			overflow-y: auto; 
+			
+			> li {
+				display: block;
+				text-align: left;
+				padding: 0 20px;
+				@include trans;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				cursor: default;
 
-			+ li {
-				border-top: 1px solid #ccc;
+				&:hover {
+					background-color: #eee;
+				}
+
+				+ li {
+					border-top: 1px solid #ccc;
+				}
 			}
 		}
+
+		&:after {
+			display: block;
+			content: '';
+			position: absolute;
+			right: 17px;
+			bottom: 100%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 9px 12px 9px;
+			border-color: transparent transparent #ffffff transparent;
+		}
+
 	}
