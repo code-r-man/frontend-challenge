@@ -8,6 +8,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	margin: 0 -20px;
 
 	> * {
 		padding: 0 20px;
@@ -42,9 +43,13 @@
 
 .card__img {
 	box-shadow: 0 0 45px 0 rgba(0,0,0,.2);
-	padding: 40px 66px;
 	position: relative;
 	margin-bottom: 30px;
+	padding: 36px;
+
+	@media (min-width: 768px) {
+		padding: 40px 66px;
+	}
 
 	picture,
 	img {
