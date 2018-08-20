@@ -23,159 +23,31 @@
 </head>
 
 <body>
-	<!-- include "partial-header.html" -->
+	
 	<!-- Header -->
-<header class="header">
-	<nav class="nav">
-		<a href="#!" class="nav__logo"><img src="img/vimcar-logo.svg" alt=""></a>
-		<div class="nav__toolbox">
-			<img src="img/cart.svg" alt="">
-			<span class="nav__bubble js-cart-bubble"></span>
+	<header class="header">
+		<nav class="nav">
+			<a href="#!" class="nav__logo"><img src="img/vimcar-logo.svg" alt=""></a>
+			<button type="button" class="nav__toolbox">
+				<img src="img/cart.svg" alt="">
+				<span class="nav__bubble js-cart-bubble"></span>
+				<ol class="nav__list" id="cart">
+					
+				</ol>
+			</button>
+		</nav>
+	</header>
+	<!-- Header ./end-->
+
+	<main class="main">
+		<div class="container">
+			<!-- Items -->
+			<ul class="card-list" id="app">
+				
+			</ul>
+			<!-- Items ./end-->
 		</div>
-	</nav>
-</header>
-<!-- Header ./end-->
-
-<main class="main">
-	<div class="container">
-		<!--
-		<ul class="card-list" id="app">
-			<li>
-				<div class="card" data-item="1001">
-					<div class="card__img">
-						<picture>
-							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/h38ss-dtbl-sel-201603@2x.png">
-							<img class="img-responsive" src="img/h38ss-dtbl-sel-201603.png" alt="watch 01">
-						</picture> 
-						<div class="card__overlay">
-							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
-						</div>
-					</div>
-					<p class="card__copy">
-						42mm Space Gray Aluminum Case with Black Woven Nylon
-					</p>
-				</div>
-			</li>
-			<li>
-				<div class="card" data-item="1002">
-					<div class="card__img">
-						<picture>
-							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/s42gd-nsgb-sel-201603@2x.png">
-							<img class="img-responsive" src="img/s42gd-nsgb-sel-201603.png" alt="watch 02">
-						</picture> 
-						<div class="card__overlay">
-							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
-						</div>
-					</div>
-					<p class="card__copy">
-						42mm Gold Aluminum Case with Gold/Royal Blue Woven Nylon
-					</p>
-				</div>
-			</li>
-			<li>
-				<div class="card" data-item="1003">
-					<div class="card__img">
-						<picture>
-							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/s42rg-nsdb-sel-201603@2x.png">
-							<img class="img-responsive" src="img/s42rg-nsdb-sel-201603.png" alt="watch 02">
-						</picture> 
-						<div class="card__overlay">
-							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
-						</div>
-					</div>
-					<p class="card__copy">
-						42mm Rose Gold Aluminum Case with Royal Blue Woven Nylon
-					</p>
-				</div>
-			</li>
-			<li>
-				<div class="card" data-item="1004">
-					<div class="card__img">
-						<picture>
-							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/s42si-nssb-sel-201603@2x.png">
-							<img class="img-responsive" src="img/s42si-nssb-sel-201603.png" alt="watch 02">
-						</picture> 
-						<div class="card__overlay">
-							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
-						</div>
-					</div>
-					<p class="card__copy">
-						42mm Silver Aluminum Case with Scuba Blue Woven Nylon
-					</p>
-				</div>
-			</li>
-			<li>
-				<div class="card" data-item="1005">
-					<div class="card__img">
-						<picture>
-							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/h38ss-dtgr-sel-201603@2x.png">
-							<img class="img-responsive" src="img/h38ss-dtgr-sel-201603.png" alt="watch">
-						</picture> 
-						<div class="card__overlay">
-							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
-						</div>
-					</div>
-					<p class="card__copy">
-						Double Tour, 38mm Stainless Steel Case with Etain Leather Band
-					</p>
-				</div>
-			</li>
-			<li>
-				<div class="card" data-item="1006">
-					<div class="card__img">
-						<picture>
-							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/h38ss-dtrd-sel-201603@2x.png">
-							<img class="img-responsive" src="img/h38ss-dtrd-sel-201603.png" alt="watch 02">
-						</picture> 
-						<div class="card__overlay">
-							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
-						</div>
-					</div>
-					<p class="card__copy">
-						Double Tour, 38mm Stainless Steel Case with Capucine Leather Band
-					</p>
-				</div>
-			</li>
-			<li>
-				<div class="card" data-item="1007">
-					<div class="card__img">
-						<picture>
-							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/h38ss-dtbl-sel-201603@2x.png">
-							<img class="img-responsive" src="img/h38ss-dtbl-sel-201603.png" alt="watch 02">
-						</picture> 
-						<div class="card__overlay">
-							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
-						</div>
-					</div>
-					<p class="card__copy">
-						Double Tour, 38mm Stainless Steel Case with Bleu Jean Leather Band
-					</p>
-				</div>
-			</li>
-			<li>
-				<div class="card" data-item="1008">
-					<div class="card__img">
-						<picture>
-							<source media="(min-width: 640px), (min-resolution: 120dpi)" srcset="img/h42ss-stbk-sel-201603@2x.png">
-							<img class="img-responsive" src="img/h42ss-stbk-sel-201603.png" alt="watch 02">
-						</picture> 
-						<div class="card__overlay">
-							<button class="btn card__btn js-item-add" type="button">Add to Cart</button>
-						</div>
-					</div>
-					<p class="card__copy">
-						Single Tour, 42mm Stainless Steel Case with Noir Leather Band
-					</p>
-				</div>
-			</li>
-		</ul>
-		-->
-
-		<ul class="card-list" id="app">
-			
-		</ul>
-	</div>
-</main>
+	</main>
 
 	<!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

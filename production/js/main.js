@@ -2,19 +2,26 @@
 $(document).ready(() => {
     const products = []; 
 
-    // Add the product to the total products array
-    function addProduct(_id,_target) {
-        products.push(_id);
-        updateCart(_target);
-    }
-
     // Update total number of items in cart
-    function updateCart(_target) {
+    function updateCart(_id,_target) {
+        products.push(_id);
+
         const totalNumber = products.length;
 
         if (totalNumber > 0 && !$(_target).prop('disabled')) {
             $('.js-cart-bubble').addClass('in').text(totalNumber)
         }
+
+        const itemsDeconst = [...items];
+
+        // Get the index of the added item
+        const targetIndex = itemsDeconst.findIndex(item => {
+            return item.id === _id;
+        });
+
+
+        // Append the cart list with the product details
+        $('#cart').append(`<li>${items[targetIndex].copy}</li>`);
 
         // Inform the user that the item has been added
         const initialText = $(_target).text();
@@ -27,12 +34,11 @@ $(document).ready(() => {
         }, 1000);
     }
 
-    // Add the item when user clicks on the 'add cart button'
-    $('.js-item-add').click((event) => {
-
+    // 'Add to Cart' handler
+    $( document ).on( 'click', '.js-item-add', function() {
         // Get the item id and push it
-        addProduct($(this).parents('.card').data('item'), event.target);            
-    })
+        updateCart($(this).parents('.card').data('item'), $(this));                    
+    });
 });
 
 
