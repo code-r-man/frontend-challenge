@@ -9,7 +9,11 @@ $(document).ready(() => {
         const totalNumber = products.length;
 
         if (totalNumber > 0 && !$(_target).prop('disabled')) {
+            // Show the dropdown list
             $('.js-cart-bubble').addClass('in').text(totalNumber)
+
+            // Clear the 'empty cart message'
+            $('#cart').find('[data-default]').remove();
         }
 
         const itemsDeconst = [...items];
@@ -21,7 +25,7 @@ $(document).ready(() => {
 
 
         // Append the cart list with the product details
-        $('#cart').append(`<li>${items[targetIndex].copy}</li>`);
+        $('#cart').append(`<li data-key="${items[targetIndex].id}">${items[targetIndex].copy}</li>`);
 
         // Inform the user that the item has been added
         const initialText = $(_target).text();
@@ -41,10 +45,20 @@ $(document).ready(() => {
     });
 
     // Toggle cart list
-    $('.js-cart-toggle').click(()=> {
-        console.log('hey');
+    const toggleItemsList = () => {
         $('.js-nav-list').hasClass('in') ? $('.js-nav-list').removeClass('in') : $('.js-nav-list').addClass('in');
-        
+    };
+
+    $('.js-cart-toggle').click(()=> {
+        toggleItemsList();
+    });
+
+    $('body').click(function(event){
+        $('.js-nav-list').removeClass('in');
+    });
+
+    $('.js-nav-list, .js-cart-toggle').click(function(event) {
+        event.stopPropagation();
     });
 });
 
