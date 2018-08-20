@@ -18,6 +18,11 @@ $breaks: ($xs "xs") ($sm "sm") ($md "md") ($lg "lg");
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 1936px;
     padding: 0 $gutter-width;
+    max-width: 930px;
+
+    @media (min-width: 1800px) {
+	    max-width: 1936px;
+    }
+
 }
