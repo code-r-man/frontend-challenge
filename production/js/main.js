@@ -42,7 +42,7 @@ $(document).ready(() => {
     }
 
     // 'Add to Cart' handler
-    $( document ).on( 'click', '.js-item-add', function() {
+    $(document).on( 'click', '.js-item-add', function() {
         // Get the item id and push it
         updateCart($(this).parents('.card').data('item'), $(this));                    
     });
@@ -54,13 +54,25 @@ $(document).ready(() => {
     };
 
     $('.js-cart-toggle').click(()=> {
+        const thisTarget = $(this);
+        // Show/hide items list
         toggleItemsList();
     });
 
+    // Animate cart click
+    $(document).on('mousedown', '.js-cart-toggle', function(){
+        $(this).addClass('click');
+
+        setTimeout(()=>{
+            $(this).removeClass('click');
+        }, 300);
+    });
+
+    // Hide the list on click event
     $('body').click(function(event){
         $('.js-nav-list').removeClass('in');
     });
-
+    // Prevent hiding the list
     $('.js-nav-list, .js-cart-toggle').click(function(event) {
         event.stopPropagation();
     });

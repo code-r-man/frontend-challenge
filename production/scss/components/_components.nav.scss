@@ -39,10 +39,27 @@
 			right: 78px;
 		}
 
+		&:before {
+			display: block;
+			content: '';
+			background-color: #eee;
+			width: 140px;
+			height: 140px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			border-radius: 50%;
+			transform: translate(-50%, -50%) scale(0,0);
+			opacity: 1;
+			transition: none;
+		}
+
 		> img {
 			display: block;
 			margin-bottom: 0;
 			width: 44px;	
+			position: relative;
+			z-index: 10;
 
 			&.animate {
 				animation-name: shake;
@@ -80,6 +97,16 @@
 
 		&[disabled] {
 			cursor: default !important;
+		}
+
+		&.click {
+
+			&:before {
+				transition-duration: .7s;
+				@include trans;
+				transform: translate(-50%,-50%) scale(1,1);
+				opacity: 0;				
+			}
 		}
 	}
 
